@@ -1,0 +1,92 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Global styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f2f5;
+    position: relative; /* Added position relative */
+    max-height: 100vh; /* Added min-height */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #aeaeae, #5c5c5c);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.user p {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.sidebar {
+    width: 250px;
+    background: linear-gradient(to right, #282c34, #1a1d24);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 60px); /* Adjusted height to fill until footer */
+    overflow-y: auto; /* Added to enable scrolling if content exceeds sidebar height */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0;
+    padding: 15px 0;
+    display: block;
+    transition: border-radius 0.5s ease;
+}
+
+.sidebar a:hover {
+    background-color: #3b3b3b;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, border-radius 0.5s ease;
+}
+
+.sidebar a.active {
+    border-radius: 25px;
+    background-color: #4CAF50;
+}
+
+.main-content {
+    padding: 20px;
+    margin-left: 250px; /* Adjusted margin to accommodate sidebar width */
+    margin-bottom: 60px; /* Adjusted margin bottom for footer */
+}
+
+footer {
+    height: 60px;
+    background: linear-gradient(to right, #b2b2b2, #d6d6d6);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
